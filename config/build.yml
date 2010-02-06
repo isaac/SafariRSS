@@ -1,0 +1,11 @@
+name: SafariRSS
+load: lib/application.rb
+identifier: nz.co.kearse.isaac.SafariRSS
+version: "1.0"
+icon: resources/SafariRSS.icns
+resources:
+  - resources/**/*.*
+sources: 
+  - lib/**/*.rb
+agent: true
+stdlib: false
