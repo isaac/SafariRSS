@@ -11,8 +11,9 @@ class Application
   
   def start
     application :name => "SafariRSS" do |app|
+      eventManager = NSAppleEventManager.sharedAppleEventManager
       gurl = 'GURL'.unpack('N').first
-      NSAppleEventManager.sharedAppleEventManager.setEventHandler self, andSelector:"getURL:reply:", forEventClass:gurl , andEventID:gurl
+      eventManager.setEventHandler self, andSelector:"getURL:reply:", forEventClass:gurl , andEventID:gurl
     end
   end
   
